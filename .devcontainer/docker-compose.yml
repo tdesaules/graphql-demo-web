@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  graphqldemoweb:
+    networks:
+    - traefik
+    dns: consul-server
+    container_name: graphqldemoweb
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - ..:/workspace/GraphQLDemoWeb:cached
+    command: sleep infinity
+    ports:
+    - "3000:3000"
+    labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.graphqldemoweb.rule=Host(`ae-graphqldemoweb.service.consul`)"
+    - "traefik.http.routers.graphqldemoweb.entrypoints=web"
+    - 'SERVICE_3000_NAME=graphqldemoweb'
+    - 'SERVICE_3000_TAGS=3000,http'
+
+networks:
+  traefik:
+    external: true

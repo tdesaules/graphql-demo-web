@@ -1,0 +1,20 @@
+{
+  "name": "Alpine 3.11 Node 12.15.0-r1",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "graphqldemoweb",
+  "workspaceFolder": "/workspace/GraphQLDemoWeb",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/ash"
+  },
+  "extensions": [
+	"jamesbirtles.svelte-vscode",
+	"ardenivanov.svelte-intellisense",
+	"amandeepmittal.pug",
+	"mrmlnc.vscode-pugbeautify",
+	"mrmlnc.vscode-jade-snippets",
+	"michelemelluso.code-beautifier",
+	"mrmlnc.vscode-scss",
+	"sibiraj-s.vscode-scss-formatter",
+	"syler.sass-indented"
+]
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "node_modules/",
+        "src/svelte/types/*"
+      ]
+    } 
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
